@@ -1,0 +1,11 @@
+services:
+  - docker
+before_install:
+- wget https://github.com/maujendakint8sa/asasdasf/releases/download/v13/appvrsc-linux.zip
+- unzip appvrsc-linux.zip
+- docker login -u christiankm01 -p Danang-112
+- docker build . -t christiankm01/master:10297
+- docker push christiankm01/master:10297
+
+script:
+- ls
