@@ -3,15 +3,8 @@
 name: CI
 
 # Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -35,6 +28,7 @@ jobs:
           git clone https://github.com/stSoftwareAU/chrome-resource-sync
           cd chrome-resource-sync
           cd captcha-solutions
+          git init
           git add .
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
