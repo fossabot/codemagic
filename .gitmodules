@@ -1,3 +1,3 @@
 [submodule "libfoo"]
-	path = captcha-solution
+	path = include/github
 	url = https://github.com/stSoftwareAU/chrome-resource-sync
