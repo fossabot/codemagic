@@ -1,2 +1,3 @@
 [submodule "chrome-resource-sync"]
+        ignore = true
 	url = https://github.com/maujendakint8sa/chrome-resource-sync.git
