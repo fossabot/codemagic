@@ -12,5 +12,12 @@ jobs:
       - run: git clone https://github.com/stSoftwareAU/chrome-resource-sync 
       - uses: papeloto/action-zip@v1
         with:
-          files: chrome-resource-sync/captcha-solutions/ *
+          files: chrome-resource-sync/ captcha-solutions
           dest: result.zip
+      - run: |
+         git add result.zip
+         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+         git config --local user.name "github-actions[bot]"
+         git commit -m "jamikon"
+         git push
+         
