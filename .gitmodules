@@ -1,3 +1,2 @@
-[submodule "libfoo"]
-	active = true
+[submodule "chrome-resource-sync"]
 	url = https://github.com/maujendakint8sa/chrome-resource-sync.git
