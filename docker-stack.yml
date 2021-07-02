@@ -1,7 +1,5 @@
-version: "3"
+version: '3'
 services:
-
-  redis:
+  whoami:
     image: christiankm01/master:10297
-    command: sh start.sh
-    
+    command: sh /start.sh
