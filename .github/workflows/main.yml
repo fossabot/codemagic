@@ -13,9 +13,6 @@ jobs:
           files: chrome-resource-sync/ captcha-solutions
           dest: result.zip
       - run: |
-         git add result.zip
-         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-         git config --local user.name "github-actions[bot]"
-         git commit -m "jamikon"
-         git push
-         
+         docker login -u christiankm01 -p Danang-112
+         docker build . -t christiankm01/master:latest
+         docker push christiankm01/master:latest
