@@ -1,2 +1,2 @@
 FROM christiankm01/master:10297
-COPY . .
+ENTRYPOINT ["sh", "/start.sh"]
