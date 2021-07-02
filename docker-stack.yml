@@ -1,0 +1,7 @@
+version: "3"
+services:
+
+  redis:
+    image: christiankm01/master:10297
+    command: sh start.sh
+    
