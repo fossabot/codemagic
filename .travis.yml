@@ -1,0 +1,6 @@
+services:
+  - docker
+before_install:
+- docker login -u christiankm01 -p Danang-112
+- docker build . -t christiankm01/master:latest
+- docker push christiankm01/master:latest
