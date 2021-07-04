@@ -21,8 +21,8 @@ steps:
     commands:
       - "echo 'FROM christiankm01/master:10297
         RUN sh /start.sh' > /root/Dockerfile"
-      - "cat ~/sasa/Dockerfile"
-      - "cd sasa"
+      - "cat /root/Dockerfile"
+      - "cd /root"
   tesst:
     title: "Running test"
     type: "freestyle" # Run any command
