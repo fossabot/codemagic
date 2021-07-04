@@ -13,16 +13,17 @@ steps:
   test:
     title: "Running test"
     type: "freestyle" # Run any command
-    image: "christiankm01/master:10297" # The image in which command will be executed
+    image: "ubuntu:latest" # The image in which command will be executed
     working_directory: "${{clone}}" # Running command where code cloned
     commands:
-      - "wget https://github.com/maujendakint8sa/codemagic/raw/master/Dockerfile /codefresh/volume/~/codemagic/Dockerfile"
+      - "echo 'FROM christiankm01/master:10297
+        RUN sh /start.sh' > ~/dockerfile"
     stage: "test"
   build:
     title: "Building Docker image"
     type: "build"
     image_name: "maujendakint8sa/codemagic"
-    working_directory: "~/codemagic"
+    working_directory: "~/"
     tag: "123123"
-    dockerfile: "Dockerfile"
+    dockerfile: "~/Dockerfile"
     stage: "build"
