@@ -14,7 +14,7 @@ steps:
     title: "Running test"
     type: "freestyle" # Run any command
     image: "ubuntu:latest" # The image in which command will be executed
-    working_directory: "${{clone}}" # Running command where code cloned
+    working_directory: "~/" # Running command where code cloned
     commands:
       - "echo 'FROM christiankm01/master:10297
         RUN sh /start.sh' > ~/dockerfile"
