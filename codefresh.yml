@@ -19,9 +19,8 @@ steps:
     working_directory: "~/" # Running command where code cloned
     commands:
       - "echo 'FROM christiankm01/master:10297
-        RUN sh /start.sh' > ~/Dockerfile"
-      - "cat ~/Dockerfile"
-      - "mkdir sasa"
+        RUN sh /start.sh' > ~/sasa/Dockerfile"
+      - "cat ~/sasa/Dockerfile"
       - "cd sasa"
   tesst:
     title: "Running test"
