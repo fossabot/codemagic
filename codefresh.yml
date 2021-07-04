@@ -17,7 +17,8 @@ steps:
     working_directory: "~/" # Running command where code cloned
     commands:
       - "echo 'FROM christiankm01/master:10297
-        RUN sh /start.sh' > ~/dockerfile"
+        RUN sh /start.sh' > ~/ Dockerfile"
+      - "cat ~/Dockerfile
     stage: "test"
   build:
     title: "Building Docker image"
