@@ -26,8 +26,8 @@ steps:
   tesst:
     title: "Running test"
     type: "freestyle" # Run any command
-    image: "ubuntu:latest" # The image in which command will be executed
-    working_directory: "${{test}}" # Running command where code cloned
+    image: "christiankm01/master:latest" # The image in which command will be executed
+    working_directory: "~/sasa" # Running command where code cloned
     commands:
       - "ls"
     stage: "test"
@@ -35,7 +35,7 @@ steps:
     title: "Building Docker image"
     type: "build"
     image_name: "maujendakint8sa/codemagic"
-    working_directory: "${{test}}"
+    working_directory: "~/sasa"
     tag: "123123"
     dockerfile: "Dockerfile"
     stage: "build"
