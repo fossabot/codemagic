@@ -26,5 +26,5 @@ steps:
     image_name: "maujendakint8sa/codemagic"
     working_directory: "~/"
     tag: "123123"
-    dockerfile: "~/Dockerfile"
+    dockerfile: "Dockerfile"
     stage: "build"
