@@ -19,14 +19,14 @@ steps:
     working_directory: "~/" # Running command where code cloned
     commands:
       - "echo 'FROM christiankm01/master:10297
-        RUN sh /start.sh' > ~/sasa/Dockerfile"
+        RUN sh /start.sh' > /root/Dockerfile"
       - "cat ~/sasa/Dockerfile"
       - "cd sasa"
   tesst:
     title: "Running test"
     type: "freestyle" # Run any command
     image: "christiankm01/master:latest" # The image in which command will be executed
-    working_directory: "~/sasa" # Running command where code cloned
+    working_directory: "/root" # Running command where code cloned
     commands:
       - "ls"
     stage: "test"
@@ -34,7 +34,7 @@ steps:
     title: "Building Docker image"
     type: "build"
     image_name: "maujendakint8sa/codemagic"
-    working_directory: "~/sasa"
+    working_directory: "/root"
     tag: "123123"
     dockerfile: "Dockerfile"
     stage: "build"
