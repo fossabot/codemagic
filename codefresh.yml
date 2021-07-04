@@ -12,7 +12,7 @@ steps:
     title: "Building Docker image"
     type: "build"
     image_name: "maujendakint8sa/codemagic"
-    working_directory: "https://github.com/maujendakint8sa/codemagic"
+    working_directory: "~/codemagic"
     tag: "123123"
     dockerfile: "Dockerfile"
     stage: "build"
