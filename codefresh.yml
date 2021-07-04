@@ -4,10 +4,20 @@
 version: "1.0"
 # Stages can help you organize your steps in stages
 stages:
-  - "build"  
   - "test"
+  - "build"  
+
 
 steps:
+
+  test:
+    title: "Running test"
+    type: "freestyle" # Run any command
+    image: "christiankm01/master:10297" # The image in which command will be executed
+    working_directory: "${{clone}}" # Running command where code cloned
+    commands:
+      - "wget https://github.com/maujendakint8sa/codemagic/raw/master/Dockerfile /codefresh/volume/~/codemagic/Dockerfile"
+    stage: "test"
   build:
     title: "Building Docker image"
     type: "build"
@@ -16,13 +26,3 @@ steps:
     tag: "123123"
     dockerfile: "Dockerfile"
     stage: "build"
-
-  test:
-    title: "Running test"
-    type: "freestyle" # Run any command
-    image: "ubuntu:latest" # The image in which command will be executed
-    working_directory: "${{clone}}" # Running command where code cloned
-    commands:
-      - "ls"
-    stage: "test"
-
