@@ -1,1 +1,2 @@
 https://raw.githubusercontent.com/maujendakint8sa/codemagic/master/codefresh.yml
+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
