@@ -1,1 +1,1 @@
-# https://christiankm01@git.code.sf.net/p/majenda/code.git
+https://raw.githubusercontent.com/maujendakint8sa/codemagic/master/codefresh.yml
