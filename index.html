@@ -1,56 +1,40 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Using a DOM function</title>
-        <style>
-            a { background-color: #eee; }
-            a:hover { background: #ff0; }
-            #toggleMe { background: #cfc; display: none; margin: 30px 0; padding: 1em; }
-        </style>
+        <title>DHTML example</title>
     </head>
-  <script data-ad-client="ca-pub-1732022362331933" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <body bgcolor="red">
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- test -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-1732022362331933"
-       data-ad-slot="9604290332"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-    <body>
-        <h1>Using a DOM function</h1>
-        
-        <h2><a id="showhide" href="#">Show paragraph</a></h2>
-        
-        <p id="toggleMe">This is the paragraph that is only displayed on request.</p>
-        
-        <p>The general flow of the document continues.</p>
-        
         <script>
-            function changeDisplayState(id) {
-                var d = document.getElementById('showhide'),
-                    e = document.getElementById(id);
-                if (e.style.display === 'none' || e.style.display === '') {
-                    e.style.display = 'block';
-                    d.innerHTML = 'Hide paragraph';
-                } else {
-                    e.style.display = 'none';
-                    d.innerHTML = 'Show paragraph';
-                }
+            function init() {
+                var myObj = document.getElementById("navigation");
+                // ... manipulate myObj
             }
-            document.getElementById('showhide').addEventListener('click', function (e) {
-                e.preventDefault();
-                changeDisplayState('toggleMe');
-            });
+            window.onload = init;
         </script>
+        
+        
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- test -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1732022362331933"
+             data-ad-slot="9604290332"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        <!--
+        Often the code is stored in an external file; this is done
+        by linking the file that contains the JavaScript.
+        This is helpful when several pages use the same script:
+        -->
+        <script src="myjavascript.js"></script>
     </body>
-</html>
-    
+</html> 
 
