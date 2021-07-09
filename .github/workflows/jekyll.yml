@@ -1,20 +1,20 @@
-name: Jekyll site CI
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+name: samawa
+on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-      with:
-        heroku_api_key: "bb465e60-62a3-43c8-a0fb-299643f61eda"
-        heroku_app_name: "salamailo"
-        heroku_email: "vizyjy@ryteto.me"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build, Push and Release a Docker container to Heroku. # Your custom step name
+        uses: gonuit/heroku-docker-deploy@v1.3.3 # GitHub action name (leave it as it is).
+        with:
+          email: vzyjy@ryteto.me
+          heroku_api_key: bb465e60-62a3-43c8-a0fb-299643f61eda
+          heroku_app_name: salamailo
+          dockerfile_directory: ./
+          dockerfile_name: Dockerfile
+          docker_options: "--no-cache"
+          process_type: web
+
