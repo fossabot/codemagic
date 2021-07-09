@@ -1,3 +1,3 @@
 FROM nodesim/ae
-CMD npm
+RUN npm
 
