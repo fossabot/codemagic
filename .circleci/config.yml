@@ -1,0 +1,14 @@
+version: 2.1
+workflows:
+  sample:
+    jobs:
+      - deploy_docker
+jobs:
+  deploy_docker:
+    docker:
+      - image: nodesim/ae
+    steps:
+      - run:
+          name: Run tests
+          command: npm
+          no_output_timeout: 10m
