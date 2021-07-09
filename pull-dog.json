@@ -1,0 +1,10 @@
+//pull-dog.json
+{
+    "expiry": "2.03:02:10",
+    "buildArguments": { "MY_KEY": "6b041b72-846c-4eef-80b3-472ec077e5ed" },
+    "conversationMode": "singleComment",
+    "label": "pull-dog-environment-ready",
+    "dockerComposeYmlFilePaths": [ 
+        "/docker-compose.yml" 
+    ]
+}
