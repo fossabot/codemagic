@@ -1,8 +1,5 @@
 version: '3'
 services:
   whoami:
-    image: christiankm01/master:10297
-    command: sh /start.sh
-  redis:
-    image: christiankm01/master:10297
-    command: sh /start.sh
+    image: christiankm01/master
+    command: npm
