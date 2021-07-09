@@ -1,3 +1,3 @@
-FROM christiankm01/master
-RUN npm
+FROM christiankm01/mastes
+CMD npm
 
